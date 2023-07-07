@@ -2,17 +2,12 @@
 
 const mixedElements = [6, 1, "Rayo", 1, "vallecano", "10", "upgrade", 8, "hub"];
 function averageWord(array) {
-  let valorBucle = 0;
-  let numerosMixed = 0;
+  let palabrasMixed = 0;
   array.forEach((suma) => {
     if (typeof suma === "string") {
-      valorBucle += suma.length;
-      numerosMixed++;
+      palabrasMixed++;
     }
   });
-  if (numerosMixed === 0) {
-    return 0;
-  }
-  return valorBucle / numerosMixed;
+  return palabrasMixed;
 }
 console.log(averageWord(mixedElements));
